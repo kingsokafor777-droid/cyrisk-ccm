@@ -1,0 +1,60 @@
+{
+  "schema_version": "cyrisk.ccm/v1",
+  "as_of": "2026-08-15T00:00:00Z",
+  "evidence_references": [
+    {
+      "schema_version": "ccm.core/v1",
+      "evidence_id": "evidence_one",
+      "kind": "configuration",
+      "collected_at": "2026-08-01T00:00:00Z",
+      "expires_at": "2026-08-30T00:00:00Z",
+      "payload_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "content_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "reference_locator": "synthetic://ccm/evidence_one"
+    }
+  ],
+  "assessment_references": [
+    {
+      "schema_version": "ccm.core/v1",
+      "assessment_id": "assessment_one",
+      "control_id": "control_one",
+      "status": "partial",
+      "assessed_at": "2026-08-01T00:00:00Z",
+      "coverage_percent": 50,
+      "evidence_ids": ["evidence_one"],
+      "evidence_hashes": ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"]
+    },
+    {
+      "schema_version": "ccm.core/v1",
+      "assessment_id": "assessment_two",
+      "control_id": "control_two",
+      "status": "not_assessed",
+      "assessed_at": "2026-08-01T00:00:00Z",
+      "coverage_percent": 0,
+      "evidence_ids": [],
+      "evidence_hashes": []
+    }
+  ],
+  "mappings": [
+    {
+      "assessment_id": "assessment_one",
+      "candidate_id": "candidate_coverage",
+      "source_field": "coverage_percent",
+      "unit": "percent",
+      "source_class": "ccm_assessment_reference",
+      "confidence": "declared_medium",
+      "completeness": "declared_bounded",
+      "limitation": "Synthetic CCM reference metadata requires downstream human review."
+    },
+    {
+      "assessment_id": "assessment_two",
+      "candidate_id": "candidate_unavailable",
+      "source_field": "assessment_status",
+      "unit": "boolean",
+      "source_class": "ccm_assessment_reference",
+      "confidence": "declared_low",
+      "completeness": "declared_partial",
+      "limitation": "No conclusion is available when the supplied assessment is not assessed."
+    }
+  ]
+}

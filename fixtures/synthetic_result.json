@@ -1,0 +1,37 @@
+{
+  "schema_version": "cyrisk.ccm/v1",
+  "source_schema_version": "ccm.core/v1",
+  "candidates": [
+    {
+      "schema_version": "cyrisk.ccm/v1",
+      "candidate_id": "candidate_coverage",
+      "source_assessment_id": "assessment_one",
+      "source_control_id": "control_one",
+      "source_evidence_ids": [
+        "evidence_one"
+      ],
+      "source_reference_hashes": [
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      ],
+      "source_class": "ccm_assessment_reference",
+      "source_field": "coverage_percent",
+      "value": 50,
+      "unit": "percent",
+      "confidence": "declared_medium",
+      "completeness": "declared_bounded",
+      "limitation": "Synthetic CCM reference metadata requires downstream human review.",
+      "candidate_hash": "d80211446edfe8e3ded474df9bfad44347f32eb0c5b30245e42671b59a6fd6a1"
+    }
+  ],
+  "coverage_gaps": [
+    {
+      "schema_version": "cyrisk.ccm/v1",
+      "assessment_id": "assessment_two",
+      "candidate_id": "candidate_unavailable",
+      "code": "assessment_unavailable",
+      "detail": "The supplied assessment is absent, not assessed, or in error."
+    }
+  ],
+  "limitation": "Candidates preserve supplied technical metadata only; they do not establish evidence truth, control effectiveness, probability, loss, financial exposure, or a risk decision.",
+  "manifest_hash": "59fdb3b06c44b412d797f345331b1192d017bbe86c6dcca1e3806b0e3efda658"
+}
