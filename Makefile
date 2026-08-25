@@ -16,7 +16,7 @@ typecheck:
 	mypy src
 
 test:
-	pytest
+	PYTHONPATH=src pytest
 
 build:
 	python -m pip wheel --no-deps --wheel-dir dist .
